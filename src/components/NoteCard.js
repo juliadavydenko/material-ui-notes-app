@@ -4,13 +4,13 @@ import { CardHeader } from "@mui/material";
 import { CardContent } from "@mui/material";
 import { DeleteOutlineOutlined } from "@mui/icons-material";
 
-function NoteCard({ note }) {
+function NoteCard({ note, handleDelete }) {
   return (
     <div>
       <Card elevation={1}>
         <CardHeader
           action={
-            <IconButton>
+            <IconButton onClick={() => handleDelete(note.id)}>
               <DeleteOutlineOutlined />
             </IconButton>
           }
