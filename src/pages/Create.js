@@ -1,9 +1,18 @@
 import React, { useState } from "react";
-import { Typography, Button, Container } from "@mui/material";
+import {
+  Typography,
+  Button,
+  Container,
+  FormControlLabel,
+  FormLabel,
+} from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 import { TextField } from "@mui/material";
+import { Radio } from "@mui/material";
+import { RadioGroup } from "@mui/material";
+import { FormControl } from "@mui/base";
 
 // const theme = createTheme();
 const useStyles = makeStyles({
@@ -19,6 +28,7 @@ export default function Create() {
   const [details, setDetails] = useState("");
   const [titleError, setTitleError] = useState(false);
   const [detailsError, setDetailsError] = useState(false);
+  const [category, setCategory] = useState("todos");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,7 +43,7 @@ export default function Create() {
     }
 
     if (title && details) {
-      console.log(title, details);
+      console.log(title, details, category);
     }
   };
   return (
@@ -69,6 +79,24 @@ export default function Create() {
           required
           error={detailsError}
         />
+
+        <FormControl className={classes.field}>
+          <FormLabel>Note Category</FormLabel>
+          <RadioGroup
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <FormControlLabel value="money" control={<Radio />} label="Money" />
+            <FormControlLabel value="todos" control={<Radio />} label="Todos" />
+            <FormControlLabel
+              value="reminders"
+              control={<Radio />}
+              label="Reminders"
+            />
+            <FormControlLabel value="work" control={<Radio />} label="Work" />
+          </RadioGroup>
+        </FormControl>
+
         <Button
           className={classes.btn}
           type="submit"
