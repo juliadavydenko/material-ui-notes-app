@@ -10,6 +10,7 @@ import {
   AppBar,
   Toolbar,
   Avatar,
+  Box,
 } from "@mui/material";
 import { AddCircleOutlineOutlined, SubjectOutlined } from "@mui/icons-material";
 import { useHistory, useLocation } from "react-router-dom";
@@ -74,7 +75,8 @@ export default function Layout({ children }) {
       {/* app bar */}
       <AppBar
         position="fixed"
-        className={classes.appBar}
+        style={{ width: `calc(100% - ${drawerWidth}px)` }}
+        // className={classes.appBar}
         elevation={0}
         color="primary"
       >
@@ -116,6 +118,7 @@ export default function Layout({ children }) {
           ))}
         </List>
       </Drawer>
+
       <div className={classes.page}>
         <div className={classes.toolbar}></div>
         {children}

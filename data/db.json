@@ -23,6 +23,30 @@
       "details": "Should be green ",
       "category": "money",
       "id": 5
+    },
+    {
+      "title": "Finish the project",
+      "details": "finish the Material UI project for the sake of practice and portfolio, play around with color schemes as well!",
+      "category": "work",
+      "id": 6
+    },
+    {
+      "title": "This is a reminder to feel abundant",
+      "details": "You already have everything you need. Enjoy, love and share!",
+      "category": "reminders",
+      "id": 7
+    },
+    {
+      "title": "This is a little todo",
+      "details": "It is so little that it's easy to forget about it, but we rather don't (:",
+      "category": "todos",
+      "id": 8
+    },
+    {
+      "title": "Another money note",
+      "details": "I just thought that we should have more money notes, cause they are green and we attract money into our lives",
+      "category": "money",
+      "id": 9
     }
   ]
 }
