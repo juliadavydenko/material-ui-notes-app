@@ -41,6 +41,9 @@ const useStyles = makeStyles((theme) => {
       width: `calc(100% - ${drawerWidth}px)`,
     },
     toolbar: theme.mixins.toolbar,
+    date: {
+      flexGrow: 1,
+    },
   };
 });
 
@@ -65,7 +68,10 @@ export default function Layout({ children }) {
       {/* app bar */}
       <AppBar className={classes.appbar} elevation={0}>
         <Toolbar>
-          <Typography>{format(new Date(), "do MMMM Y")}</Typography>
+          <Typography className={classes.date} color="secondary" anchor="right">
+            Today is the {format(new Date(), "do MMMM Y")}
+          </Typography>
+          <Typography>Username</Typography>
         </Toolbar>
       </AppBar>
       {/* side drawer */}
