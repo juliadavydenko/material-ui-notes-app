@@ -3,7 +3,7 @@ import React from "react";
 import { Typography, Drawer } from "@mui/material";
 import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import { AddCircleOutlineOutlined, SubjectOutlined } from "@mui/icons-material";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -21,11 +21,15 @@ const useStyles = makeStyles({
   root: {
     display: "flex",
   },
+  active: {
+    background: "#f4f4f4",
+  },
 });
 
 export default function Layout({ children }) {
   const classes = useStyles();
   const history = useHistory();
+  const location = useLocation();
   const menuItems = [
     {
       text: "My Notes",
@@ -61,6 +65,7 @@ export default function Layout({ children }) {
               button
               key={item.text}
               onClick={() => history.push(item.path)}
+              className={location.pathname == item.path ? classes.active : null}
             >
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
