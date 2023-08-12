@@ -12,16 +12,27 @@ const useStyles = makeStyles({
   drawer: {
     width: drawerWidth,
   },
+  drawerPaper: {
+    width: drawerWidth,
+  },
+  root: {
+    display: "flex",
+  },
 });
 
 export default function Layout({ children }) {
   const classes = useStyles();
   return (
-    <div>
+    <div className={classes.root}>
       {/* app bar */}
       {/* side drawer */}
 
-      <Drawer className={classes.drawer} variant="permanent" anchor="left">
+      <Drawer
+        className={classes.drawer}
+        variant="permanent"
+        anchor="left"
+        classes={{ paper: classes.drawerPaper }}
+      >
         <div>
           <Typography variant="h5">My Notes</Typography>
         </div>
