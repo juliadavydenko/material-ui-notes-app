@@ -9,10 +9,12 @@ import {
   Drawer,
   AppBar,
   Toolbar,
+  Avatar,
 } from "@mui/material";
 import { AddCircleOutlineOutlined, SubjectOutlined } from "@mui/icons-material";
 import { useHistory, useLocation } from "react-router-dom";
 import { format } from "date-fns";
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => {
@@ -37,12 +39,16 @@ const useStyles = makeStyles((theme) => {
     title: {
       padding: theme.spacing(2),
     },
-    appbar: {
+    appBar: {
       width: `calc(100% - ${drawerWidth}px)`,
+      marginLeft: drawerWidth,
     },
     toolbar: theme.mixins.toolbar,
     date: {
       flexGrow: 1,
+    },
+    avatar: {
+      marginLeft: theme.spacing(2),
     },
   };
 });
@@ -66,12 +72,18 @@ export default function Layout({ children }) {
   return (
     <div className={classes.root}>
       {/* app bar */}
-      <AppBar className={classes.appbar} elevation={0}>
+      <AppBar
+        position="fixed"
+        className={classes.appBar}
+        elevation={0}
+        color="primary"
+      >
         <Toolbar>
-          <Typography className={classes.date} color="secondary" anchor="right">
+          <Typography className={classes.date}>
             Today is the {format(new Date(), "do MMMM Y")}
           </Typography>
-          <Typography>Username</Typography>
+          <Typography>Julia Davydenko</Typography>
+          <Avatar src="/profilepic.png" className={classes.avatar} />
         </Toolbar>
       </AppBar>
       {/* side drawer */}
