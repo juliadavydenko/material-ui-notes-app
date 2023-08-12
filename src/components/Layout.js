@@ -1,6 +1,8 @@
 import { makeStyles } from "@mui/styles";
 import React from "react";
 import { Typography, Drawer } from "@mui/material";
+import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import { AddCircleOutlineOutlined, SubjectOutlined } from "@mui/icons-material";
 
 const drawerWidth = 240;
 
@@ -22,6 +24,18 @@ const useStyles = makeStyles({
 
 export default function Layout({ children }) {
   const classes = useStyles();
+  const menuItems = [
+    {
+      text: "My Notes",
+      icon: <SubjectOutlined color="secondary" />,
+      path: "/",
+    },
+    {
+      text: "Create Note",
+      icon: <AddCircleOutlineOutlined color="secondary" />,
+      path: "/create",
+    },
+  ];
   return (
     <div className={classes.root}>
       {/* app bar */}
@@ -36,6 +50,17 @@ export default function Layout({ children }) {
         <div>
           <Typography variant="h5">My Notes</Typography>
         </div>
+
+        {/* list/links */}
+
+        <List>
+          {menuItems.map((item) => (
+            <ListItem key={item.text}>
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.text} />
+            </ListItem>
+          ))}
+        </List>
       </Drawer>
       <div className={classes.page}>{children}</div>
     </div>
