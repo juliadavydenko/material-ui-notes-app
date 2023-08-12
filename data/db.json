@@ -17,6 +17,12 @@
       "details": "My new note in my new app",
       "category": "work",
       "id": 4
+    },
+    {
+      "title": "Money note",
+      "details": "Should be green ",
+      "category": "money",
+      "id": 5
     }
   ]
 }
