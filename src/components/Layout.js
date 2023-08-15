@@ -10,7 +10,6 @@ import {
   AppBar,
   Toolbar,
   Avatar,
-  Box,
 } from "@mui/material";
 import { AddCircleOutlineOutlined, SubjectOutlined } from "@mui/icons-material";
 import { useHistory, useLocation } from "react-router-dom";
@@ -27,6 +26,7 @@ const useStyles = makeStyles((theme) => {
     },
     drawer: {
       width: drawerWidth,
+      background: "#EADBC8",
     },
     drawerPaper: {
       width: drawerWidth,
@@ -41,10 +41,12 @@ const useStyles = makeStyles((theme) => {
       padding: theme.spacing(2),
     },
     appBar: {
-      width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
-    toolbar: theme.mixins.toolbar,
+    toolbar: {
+      ...theme.mixins.toolbar,
+      background: "#f9f9f9",
+    },
     date: {
       flexGrow: 1,
     },
@@ -60,7 +62,7 @@ export default function Layout({ children }) {
   const location = useLocation();
   const menuItems = [
     {
-      text: "My Notes",
+      text: "All Notes",
       icon: <SubjectOutlined color="secondary" />,
       path: "/",
     },
@@ -77,10 +79,10 @@ export default function Layout({ children }) {
         position="fixed"
         style={{ width: `calc(100% - ${drawerWidth}px)` }}
         // className={classes.appBar}
+
         elevation={0}
-        color="primary"
       >
-        <Toolbar>
+        <Toolbar className={classes.toolbar}>
           <Typography className={classes.date}>
             Today is the {format(new Date(), "do MMMM Y")}
           </Typography>

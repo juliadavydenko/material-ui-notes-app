@@ -10,7 +10,9 @@ const theme = createTheme({
     primary: {
       main: "#EADBC8",
     },
-    secondary: purple,
+    secondary: {
+      main: "#DAC0A3",
+    },
   },
   typography: {
     fontFamily: "Quicksand",
