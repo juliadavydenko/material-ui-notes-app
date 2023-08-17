@@ -72,6 +72,9 @@ export default function Layout({ children }) {
       path: "/create",
     },
   ];
+  const imageUrl =
+    "https://lh3.googleusercontent.com/a/AAcHTtc5durmesz--lmeerAttsw28nWVK6z2Qd4tqaYy6IDwPiE4=s260-c-no";
+
   return (
     <div className={classes.root}>
       {/* app bar */}
@@ -87,7 +90,7 @@ export default function Layout({ children }) {
             Today is the {format(new Date(), "do MMMM Y")}
           </Typography>
           <Typography>Julia Davydenko</Typography>
-          <Avatar src="/profilepic.png" className={classes.avatar} />
+          <Avatar src={imageUrl} className={classes.avatar} />
         </Toolbar>
       </AppBar>
       {/* side drawer */}
