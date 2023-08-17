@@ -1,7 +1,8 @@
 {
   "name": "material-ui-notes-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://juliadavydenko.github.io/material-ui-notes-app/",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -20,7 +21,7 @@
     "react-scripts": "^5.0.1",
     "web-vitals": "^1.1.0"
   },
-  "homepage": "https://juliadavydenko.github.io/material-ui-notes-app/",
+ 
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
