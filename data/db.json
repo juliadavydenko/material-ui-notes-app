@@ -47,6 +47,24 @@
       "details": "I just thought that we should have more money notes, cause they are green and we attract money into our lives",
       "category": "money",
       "id": 9
+    },
+    {
+      "title": "sdfsdf",
+      "details": "sds",
+      "category": "todos",
+      "id": 10
+    },
+    {
+      "title": "New note, testing from GH pages",
+      "details": "It seems that the problem was due to js server not running on my local machine. Once I've started it again on port 8000 using json-server --watch data/db.json --port 8000 the notes are shown again.",
+      "category": "work",
+      "id": 11
+    },
+    {
+      "title": "New note from Localhost--test",
+      "details": "It seems that the problem was due to js server not running on my local machine. Once I've started it again on port 8000 using json-server --watch data/db.json --port 8000 the notes are shown again.",
+      "category": "work",
+      "id": 12
     }
   ]
 }
