@@ -1,0 +1,70 @@
+{
+  "notes": [
+    {
+      "title": "Yoshi's birthday bash",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "category": "reminders",
+      "id": 1
+    },
+    {
+      "title": "Order a pizza!",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "category": "todos",
+      "id": 3
+    },
+    {
+      "title": "Julia's note",
+      "details": "My new note in my new app",
+      "category": "work",
+      "id": 4
+    },
+    {
+      "title": "Money note",
+      "details": "Should be green ",
+      "category": "money",
+      "id": 5
+    },
+    {
+      "title": "Finish the project",
+      "details": "finish the Material UI project for the sake of practice and portfolio, play around with color schemes as well!",
+      "category": "work",
+      "id": 6
+    },
+    {
+      "title": "This is a reminder to feel abundant",
+      "details": "You already have everything you need. Enjoy, love and share!",
+      "category": "reminders",
+      "id": 7
+    },
+    {
+      "title": "This is a little todo",
+      "details": "It is so little that it's easy to forget about it, but we rather don't (:",
+      "category": "todos",
+      "id": 8
+    },
+    {
+      "title": "Another money note",
+      "details": "I just thought that we should have more money notes, cause they are green and we attract money into our lives",
+      "category": "money",
+      "id": 9
+    },
+    {
+      "title": "sdfsdf",
+      "details": "sds",
+      "category": "todos",
+      "id": 10
+    },
+    {
+      "title": "New note, testing from GH pages",
+      "details": "It seems that the problem was due to js server not running on my local machine. Once I've started it again on port 8000 using json-server --watch data/db.json --port 8000 the notes are shown again.",
+      "category": "work",
+      "id": 11
+    },
+    {
+      "title": "New note from Localhost--test",
+      "details": "It seems that the problem was due to js server not running on my local machine. Once I've started it again on port 8000 using json-server --watch data/db.json --port 8000 the notes are shown again.",
+      "category": "work",
+      "id": 12
+    }
+  ]
+}
