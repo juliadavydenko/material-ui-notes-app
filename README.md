@@ -1,5 +1,6 @@
 # material-ui-notes-app
 
+See demo-version on github pages! 
 GH-pages: 
 https://juliadavydenko.github.io/material-ui-notes-app/
 
